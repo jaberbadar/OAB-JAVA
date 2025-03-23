@@ -1,8 +1,12 @@
 package com.trading.collection;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map.Entry;
+import java.util.Map;
 import java.util.Scanner;
+
 
 public class CustomerTest {
 
@@ -10,34 +14,59 @@ public class CustomerTest {
 		
 		
 		
-		
-        List<Customer> custList = new ArrayList<>();
-        custList.add(new Customer(101, "ahmed", "oman"));
-        custList.add(new Customer(102, "ali", "oman"));
-        custList.add(new Customer(103, "hasan", "usa"));
-        custList.add(new Customer(104, "jaber", "ksa"));
-        custList.add(new Customer(105, "jon", "oman"));
-
-
-        Scanner value = new Scanner(System.in);
+//		
+//        List<Customer> custList = new ArrayList<>();
+//        custList.add(new Customer(101, "ahmed", "oman"));
+//        custList.add(new Customer(102, "ali", "oman"));
+//        custList.add(new Customer(103, "hasan", "usa"));
+//        custList.add(new Customer(104, "jaber", "ksa"));
+//        custList.add(new Customer(105, "jon", "oman"));
+//
+//
+//        Scanner value = new Scanner(System.in);
+//
+//        
+//        while (true) {
+//            System.out.println("1. Add Customer");
+//            System.out.println("2. Update");
+//            System.out.println("3. Delete");
+//            System.out.println("4. Show All");
+//            System.out.println("5. Exit");
+//
+//            int choice = value.nextInt();
+//            
+//            if (choice == 1) addCustomer(custList, value);
+//            else if (choice == 2) updateCustomer(custList, value);
+//            else if (choice == 3) deleteCustomer(custList, value);
+//            else if (choice == 4) showAll(custList);
+//            else break;
+//        }
+//        value.close();
+        
+        
+        
+        Map<Integer, String> empMap = new HashMap();
+        empMap.put(101, "Mohammed");
+        empMap.put(102, "ali");
+        empMap.put(103, "suleiman");
+        empMap.put(104, "farah");
+        empMap.put(101, "nooris");
+        
+        
+        
+        
+        for(Entry<Integer, String> empEntry : empMap.entrySet()) {
+        	System.out.println(empEntry.getKey()+";"+ empEntry.getValue());
+        }
 
         
-        while (true) {
-            System.out.println("1. Add Customer");
-            System.out.println("2. Update");
-            System.out.println("3. Delete");
-            System.out.println("4. Show All");
-            System.out.println("5. Exit");
-
-            int choice = value.nextInt();
-            
-            if (choice == 1) addCustomer(custList, value);
-            else if (choice == 2) updateCustomer(custList, value);
-            else if (choice == 3) deleteCustomer(custList, value);
-            else if (choice == 4) showAll(custList);
-            else break;
-        }
-        value.close();
+        
+        
+        
+        
+        
+        
+        
     }
         
   
